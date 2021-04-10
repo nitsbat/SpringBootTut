@@ -1,0 +1,30 @@
+Spring boot is a way in a which we can bootstrap or start a enterprise level project. It is used to make production grade spring applications 
+that we can run. We can build or create an api using this. e.g we have made a course management api in example.
+
+
+Problems with spring 
+
+1) Huge framework
+2) Lot of setup and configuration steps.
+3) Lot of deploy steps.
+
+So its Spring boot is a bootstrap to our application. Whenever we make an application in spring boot, it creates an standalone project.
+Don't nned to deploy , the server will run on its own. Its totally a production ready code.
+
+
+***********************************************************************************
+
+When we create a spring boot project using maven we generally give the parent pom.
+It is because the spring developers had already made a starter pack which contains pre properties and configurations to just start
+building your application, hence we give the pre define pom as the parent in our pom.
+So the parent pom will be like 
+<parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.4</version>
+    </parent>
+	
+	and our pom will be the child pom of this.
+
+
+ 
