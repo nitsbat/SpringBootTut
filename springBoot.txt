@@ -2,6 +2,11 @@ Spring boot is a way in a which we can bootstrap or start a enterprise level pro
 that we can run. We can build or create an api using this. e.g we have made a course management api in example.
 
 
+Spring MVC is a child project of whole spring framework and it lets us to create a server side code which helps us to
+map the url with our code and provide responses like Rest api response in form of JSON or a whole html web page.
+
+
+
 Problems with spring 
 
 1) Huge framework
@@ -53,3 +58,25 @@ Firstly the SpringApplication is a static class.
 	class, so this internally scan for the classpath and gave that this class is the main SpringApplication class, similarly for other annotations it 
 	will give the classpath automatically.
 4)Starts the Tomcat server. We know from above that after making a servelet we need a server to deply it to the web.
+
+********************************* REST CONTROLLER *********************************
+
+So our applictaion is not doing anything till now. So what we want is we are requesting something from our application
+, therefore our application needs to give response on some url request which is done by the controller.
+
+Rest controller in spring is a java class with some annotations. It has information about 
+what URL access triggers it and what method to run after accessing it.
+
+When we give a @RestController annotation to a class it means that that class will act as a controller 
+and now it will contain methods which will be mapped to my URL. Mapping is done through @RequestMapping url.
+
+@RequestMapping - this annotation only maps the GET method of http request by default. To map other http methods, we have
+to specify it in the annotations.
+
+There will be no requirement of mapping other than annotaions in controller class as we already know that we already had a mapping
+of SpringApplication which will scan the classpaths and register this class as controller.
+
+But one key point here is that this controller should also be in the same package of Main class. It is because the 
+@SprintBootApplication groups three annotations @EnableAutoConfiguration, @Configuration and @ComponentScan. 
+@ComponentScan is responsible to scan the package where the application is located in order to find all Components. 
+
