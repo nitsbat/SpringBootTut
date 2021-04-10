@@ -33,9 +33,23 @@ To start with the boot application we will need a main class. Now the steps invo
 1) create a servelet
 2) Deploy in tomcat server and run it on some port.
 
+What is a Java or Jakarta Servelet.?
+It can be think of an API which contains many interfaces and classes, extending the capability of servers and responds to incoming request.
+It needs to be deployed on the server to create a dynamic web page. This is very much used in building the web application.
+
 But in spring it can be just done with the single command i.e         SpringApplication.run(CourseApiMainApp.class, args);
 we can run this from the main class as application and it internally starts the tomcat server and run it.
 
 But we need to specify first that this main class is actually the spring boot application main class.
 So it can be done through an annotation @SpringBootApplication.
- 
+
+Now what happens when we run SpringApplication.run(CourseApiMainApp.class, args);
+
+Firstly the SpringApplication is a static class.
+
+1)It setups the default configuration. The default configuration and properties it takes from the parent starter pack.
+2)It initialise and creates the Spring application context which means creates the IOC container.
+3) performs the classpath scan :- this means that when we started the main class we gave an annotation to make spring recognise that it's the main
+	class, so this internally scan for the classpath and gave that this class is the main SpringApplication class, similarly for other annotations it 
+	will give the classpath automatically.
+4)Starts the Tomcat server. We know from above that after making a servelet we need a server to deply it to the web.
