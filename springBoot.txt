@@ -26,5 +26,16 @@ So the parent pom will be like
 	
 	and our pom will be the child pom of this.
 
+****************************************************************************************
 
+
+To start with the boot application we will need a main class. Now the steps involve in running an api server is 
+1) create a servelet
+2) Deploy in tomcat server and run it on some port.
+
+But in spring it can be just done with the single command i.e         SpringApplication.run(CourseApiMainApp.class, args);
+we can run this from the main class as application and it internally starts the tomcat server and run it.
+
+But we need to specify first that this main class is actually the spring boot application main class.
+So it can be done through an annotation @SpringBootApplication.
  
