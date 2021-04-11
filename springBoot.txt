@@ -30,7 +30,9 @@ So the parent pom will be like
     </parent>
 	
 	and our pom will be the child pom of this.
-
+The parent just pulls out the configurations. You don't have to give the version numbers of the dependencies once you gave the parent maven.
+This is like there will be some jars with their corresponding versions. So we just want to know the version of the parent. So this is called the
+Bill of materials. THis will include the Embedded Tomcat Server.
 ****************************************************************************************
 
 
@@ -80,3 +82,21 @@ But one key point here is that this controller should also be in the same packag
 @SprintBootApplication groups three annotations @EnableAutoConfiguration, @Configuration and @ComponentScan. 
 @ComponentScan is responsible to scan the package where the application is located in order to find all Components. 
 
+
+Whenever we return the object or the list object from the RequestMapping method , it will convert it into JSON automatically by Spring MVC.
+The generated JSON will be having the key value pair based on the class pojo.
+
+
+******************************** SPRING MVC Controller *********************************
+
+Spring MVC maps all the requests/Url's coming from client to the methods. The controller is a java class with some annotations. It has URI and http
+method and has information about what URL access triggers it and what method(http) to run after accessing it.
+
+REST Api - before building it, we have to identify the resources or contract. Alsoo look at the consumers can access that resource. the resource was 
+			Topic , that string, Course , Lesson.
+			Now for Topics we can do following request :
+			
+			GET		/topics			get all the topics.
+			GET     /topics/id		get the topic of that id.
+			POST 	/topics			create a new topic.
+			PUT		/topics/id		Updates the topic.
