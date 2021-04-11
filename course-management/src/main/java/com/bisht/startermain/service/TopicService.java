@@ -2,7 +2,6 @@ package com.bisht.startermain.service;
 
 import com.bisht.startermain.model.Topic;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 import java.util.List;
@@ -11,12 +10,16 @@ import java.util.List;
 public class TopicService {
 
     private List<Topic> topics = Arrays.asList(
-            new Topic(1, "Java", "Introduction to Java"),
-            new Topic(2, "Java Spring", "Introduction to Spring Framework"),
-            new Topic(3, "Hibernate", "Introduction to Hibernate")
+            new Topic("Java", "Java", "Introduction to Java"),
+            new Topic("spring", "Java Spring", "Introduction to Spring Framework"),
+            new Topic("hibernate", "Hibernate", "Introduction to Hibernate")
     );
 
     public List<Topic> getAllTopics() {
         return topics;
+    }
+
+    public Topic getTopicById(String id) {
+        return topics.stream().filter(a -> a.getId().equals(id)).findFirst().get();
     }
 }

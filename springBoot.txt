@@ -110,3 +110,12 @@ the concept of singleton class is like only one instance will be instantiated an
 asking for accessing that instance. Its not gonna create a new instance everytime coz its a singleton.
 So declaring a calss as business service is through the @Service annotation and then we can easily inject that instance in another class through
 autowire.
+
+To implement get request with an id like this
+
+GET     /topics/id		get the topic of that id.
+
+First we need to give the variable in the @RequestMapping annotation and that is inside the curly braces. like @RequestMapping("/topic/{id}")
+Then to know that this id is actually the String variable parameter which is passed is done through the parameter in the method and then annotate
+with the @PathVariable annotation. like this :-  public Topic getAllTopics(@PathVariable String id)
+

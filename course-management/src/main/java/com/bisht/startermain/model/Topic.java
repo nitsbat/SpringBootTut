@@ -2,21 +2,21 @@ package com.bisht.startermain.model;
 
 public class Topic {
 
-    int id;
+    String id;
     String name;
     String description;
 
-    public Topic(int id, String name, String description) {
+    public Topic(String id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
