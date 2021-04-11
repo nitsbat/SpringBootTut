@@ -130,3 +130,18 @@ post method we have to actually give the body for adding an element/item in a li
 we use RequestBody and for using a variable we use PathVariable. Both can be used simultaneously also.
 
 Similarly we can do the PUT and DELETE Request. Refer the example.
+
+
+************************************** SPRING APPLICATION CREATION WAYS **************************
+
+we can create a spring application through any of the following ways :
+1) Using Spring intializr - https://www.youtube.com/watch?v=uDhumjWApl0&list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8XeA1x&index=22
+2) Using Spring Boot CLI - https://www.youtube.com/watch?v=bNqD5P-huJc&list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8XeA1x&index=23
+3) Using STS IDE. - https://www.youtube.com/watch?v=BrIRiz_QaEA&list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8XeA1x&index=24
+
+********************************** Use DEfault properties using the application.properties file *********************
+
+Spring has a property file which sprint internally reads in key value format and then change the configurations.
+e.g : server.port = 8081 , it will change the port of the tomcat server to 8081.
+
+you can access the common properties used in spring from here - https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html
