@@ -128,3 +128,5 @@ Secondly the object which you are adding through the parameter of the method, fo
 post method we have to actually give the body for adding an element/item in a list. 
 @RequestBody annotation is similar to @PathVariable as is in Get method. But remember like for adding a object as a parameter 
 we use RequestBody and for using a variable we use PathVariable. Both can be used simultaneously also.
+
+Similarly we can do the PUT and DELETE Request. Refer the example.
