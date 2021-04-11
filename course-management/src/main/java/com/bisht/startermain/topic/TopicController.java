@@ -1,6 +1,8 @@
 package com.bisht.startermain.topic;
 
 import com.bisht.startermain.model.Topic;
+import com.bisht.startermain.service.TopicService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,13 +13,12 @@ import java.util.List;
 @RestController
 public class TopicController {
 
+    @Autowired
+    private TopicService topicService;
+
     @RequestMapping("/topic")
     public List<Topic> getAllTopics() {
-        return Arrays.asList(
-                new Topic(1, "Java", "Introduction to Java"),
-                new Topic(2, "Java Spring", "Introduction to Spring Framework"),
-                new Topic(3, "Hibernate", "Introduction to Hibernate")
-        );
+        return topicService.getAllTopics();
     }
 
 }

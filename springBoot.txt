@@ -100,3 +100,13 @@ REST Api - before building it, we have to identify the resources or contract. Al
 			GET     /topics/id		get the topic of that id.
 			POST 	/topics			create a new topic.
 			PUT		/topics/id		Updates the topic.
+			DELETE	/topics/id		Deletes the topic.
+
+******************************* BUSINESS SERVICE *********************************
+
+Concept of business service in spring is that it is a singleton class which spring creates when we start springand then it registers or keeps that 
+instance in its memory.
+the concept of singleton class is like only one instance will be instantiated and only that instance will be accessed by all the classes who are 
+asking for accessing that instance. Its not gonna create a new instance everytime coz its a singleton.
+So declaring a calss as business service is through the @Service annotation and then we can easily inject that instance in another class through
+autowire.
