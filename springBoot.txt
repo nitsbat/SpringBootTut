@@ -119,3 +119,12 @@ First we need to give the variable in the @RequestMapping annotation and that is
 Then to know that this id is actually the String variable parameter which is passed is done through the parameter in the method and then annotate
 with the @PathVariable annotation. like this :-  public Topic getAllTopics(@PathVariable String id)
 
+Arrays.asList() actually made a immutable list from which you can only access, you can't add or delete an element from that list.
+
+************************************** POST METHOD IN Spring MVC *******************
+
+To do a Post method firstly you have to provide the method in @requestMapping annotation and then give its value.
+Secondly the object which you are adding through the parameter of the method, for its linking we have to give annotation of @RequestBody as for 
+post method we have to actually give the body for adding an element/item in a list. 
+@RequestBody annotation is similar to @PathVariable as is in Get method. But remember like for adding a object as a parameter 
+we use RequestBody and for using a variable we use PathVariable. Both can be used simultaneously also.

@@ -3,9 +3,7 @@ package com.bisht.startermain.topic;
 import com.bisht.startermain.model.Topic;
 import com.bisht.startermain.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,5 +21,10 @@ public class TopicController {
     @RequestMapping("/topic/{id}")
     public Topic getAllTopics(@PathVariable String id) {
         return topicService.getTopicById(id);
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/topic")
+    public void addTopic(@RequestBody Topic topic) {
+        topicService.addTopic(topic);
     }
 }
