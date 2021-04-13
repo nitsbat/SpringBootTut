@@ -1,4 +1,4 @@
-package com.bisht.startermain.model;
+package com.bisht.startermain.topic;
 
 public class Topic {
 

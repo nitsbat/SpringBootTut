@@ -1,6 +1,5 @@
-package com.bisht.startermain.service;
+package com.bisht.startermain.topic;
 
-import com.bisht.startermain.model.Topic;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

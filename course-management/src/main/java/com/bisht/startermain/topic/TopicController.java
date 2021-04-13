@@ -1,7 +1,5 @@
 package com.bisht.startermain.topic;
 
-import com.bisht.startermain.model.Topic;
-import com.bisht.startermain.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

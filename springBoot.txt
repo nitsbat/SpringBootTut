@@ -145,3 +145,38 @@ Spring has a property file which sprint internally reads in key value format and
 e.g : server.port = 8081 , it will change the port of the tomcat server to 8081.
 
 you can access the common properties used in spring from here - https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html
+
+
+*********************************** Spring Data JPA **********************************************
+JPA - Java Persistence API - It is a specification or API which enables us to do ORM to a relational SQL database.
+	  ORM means Object relational mapping. It means that previously we use JDBC and execute SQL queries to do fetch/CRUD in a table
+	  and then take the result and map into our object by some way. But with ORM, as soon as the program starts we directly ties the
+	  entities with the column of the table and didn't do many things like execute queries and then iterating and mapping.
+      JPA is a way to use ORM . so it is an efficient way.
+	  
+Spring JPA lets you do this even more simplier than the ORM. 
+
+Apache derby is a relational embedded database.
+
+***************************************************** Create JPA DATA repository ********************
+
+The first thing we need to do is to mark the model or entity class marked so that JPA knows that i have to make table of this class.
+This can be done by marking model class with the annotation @Entity. in our case it is topic.
+The second thing to tell is the primary key of the table. Hence just put annotation @Id above the primary key member variable.
+
+in spring there is apache derby which is an embedded database and just starts as soon as we run the spring application.
+It is not used in production code but yes is used for development and also for testing.
+
+We created an interface which extending a pre defined interface CrudRepository for smooth , simple and efficient for CRUD operations.
+then we just changed all the methods with the interface one. 
+
+* If you want to specify many to one relationship or one to many relationship, you just have to provide the @ManyToOne annotaion from
+the java JPA library. java.persistence.
+
+**************************** Deploying the Spring boot application **********************
+
+after building the jar through mvn clean install.
+
+just give the command  - java -jar target/snapshot.jar
+
+and our application will run
