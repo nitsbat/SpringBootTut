@@ -1,5 +1,7 @@
-package com.bisht.startermain.topic;
+package com.bisht.startermain.controller;
 
+import com.bisht.startermain.service.TopicService;
+import com.bisht.startermain.topic.Topic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,13 +28,13 @@ public class TopicController {
         topicService.addTopic(topic);
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "/topic/{id}")
-    public void updateTopic(@RequestBody Topic topic, @PathVariable String id) {
-        topicService.updateTopic(id, topic);
+    @RequestMapping(method = RequestMethod.PUT, value = "/topic")
+    public void updateTopic(@RequestBody Topic topic) {
+        topicService.updateTopic(topic);
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/topic/{id}")
-    public void deleteTopic( @PathVariable String id) {
+    public void deleteTopic(@PathVariable String id) {
         topicService.deleteTopic(id);
     }
 }
